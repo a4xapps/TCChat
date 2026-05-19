@@ -400,9 +400,9 @@ endpoints:
       baseURL: 'https://openrouter.ai/api/v1'
       headers:
         x-librechat-body-parentmessageid: '{{LIBRECHAT_BODY_PARENTMESSAGEID}}'
-      # models:
+      models:
         # default: ['meta-llama/llama-3-70b-instruct']
-        # fetch: true
+        fetch: true
       # titleConvo: true
       # titleModel: 'meta-llama/llama-3-70b-instruct'
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.

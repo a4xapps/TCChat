@@ -406,7 +406,7 @@ endpoints:
       titleConvo: true
       # titleModel: 'meta-llama/llama-3-70b-instruct'
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
-      # dropParams: ['stop']
+      dropParams: ['stop']
       modelDisplayLabel: 'OpenRouter'
 
     # Helicone Example

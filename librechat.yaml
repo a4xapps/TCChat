@@ -401,7 +401,8 @@ endpoints:
       headers:
         x-librechat-body-parentmessageid: '{{LIBRECHAT_BODY_PARENTMESSAGEID}}'
       models:
-        # default: []
+        default:
+          - 'openrouter/auto'
         fetch: true
       titleConvo: true
       # titleModel: 'meta-llama/llama-3-70b-instruct'

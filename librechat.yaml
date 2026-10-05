@@ -249,7 +249,7 @@ endpoints:
       - "ocr"      # Optionally enhances both with OCR
 ocr:
   strategy: "mistral_ocr"
-  apiKey: "${OPENROUTER_KEY}"
+  apiKey: "${OPENROUTER_KEY2}"
   baseURL: "https://openrouter.ai/api/v1"
   mistralModel: "openrouter/auto"
   # assistants:

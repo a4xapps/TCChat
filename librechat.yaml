@@ -247,11 +247,6 @@ endpoints:
     capabilities:
       - "context"  # Enables both agent file context and upload as text
       - "ocr"      # Optionally enhances both with OCR
-ocr:
-  strategy: "mistral_ocr"
-  apiKey: "${OPENROUTER_KEY2}"
-  baseURL: "https://openrouter.ai/api/v1"
-  mistralModel: "openrouter/auto"
   # assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
@@ -550,6 +545,13 @@ ocr:
 #       preset:
 #         endpoint: "openAI"
 #         model: "gpt-4o-mini"
+
+# OCR configuration (top level, after the endpoints section)
+ocr:
+  strategy: "mistral_ocr"
+  apiKey: "${OPENROUTER_KEY2}"
+  baseURL: "https://openrouter.ai/api/v1"
+  mistralModel: "openrouter/auto"
 
 fileConfig:
   endpoints:

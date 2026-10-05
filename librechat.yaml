@@ -594,11 +594,3 @@ memory:
     model: "gpt-4o-mini"
     instructions: "You are a memory management assistant. Store and manage user information accurately."
 
-# OCR configuration (top level, after the endpoints section)
-ocr:
-  strategy: "mistral_ocr"
-  apiKey: "${OCR_API_KEY}"
-  baseURL: "https://api.mistral.ai/v1"
-  mistralModel: "mistral-ocr-latest"
-    model_parameters:
-      temperature: 0.1

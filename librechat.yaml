@@ -549,10 +549,10 @@ endpoints:
 # OCR configuration (top level, after the endpoints section)
 ocr:
   strategy: "mistral_ocr"
-  apiKey: "${OPENROUTER_KEY}"
-  baseURL: "https://openrouter.ai/api/v1"
-  mistralModel: "openrouter/auto"
-
+  apiKey: "${OCR_API_KEY}"
+  baseURL: "https://api.mistral.ai/v1"
+  mistralModel: "mistral-ocr-latest"
+  
 fileConfig:
   endpoints:
     default:

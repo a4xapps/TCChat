@@ -551,10 +551,10 @@ endpoints:
 
 # Azure Mistral OCR: https://www.librechat.ai/docs/features/ocr#2-azure-mistral-ocr
 ocr:
-  strategy: "azure_mistral_ocr"
-  mistralModel: "deployed-mistral-ocr-2503"  # Must match your Azure deployment name
-  apiKey: "${AZURE_MISTRAL_OCR_API_KEY}"     # Defined in .env
-  baseURL: "https://your-deployed-endpoint.models.ai.azure.com/v1"  # Your Azure endpoint
+  strategy: "mistral_ocr"
+  apiKey: "${OCR_API_KEY}"
+  baseURL: "https://api.mistral.ai/v1"
+  mistralModel: "mistral-ocr-latest"
 
 fileConfig:
   endpoints:

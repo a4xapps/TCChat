@@ -241,12 +241,7 @@ actions:
 #       - "mcp-obsidian"
 #       - /path/to/obsidian/vault
 
-# Definition of custom endpoints
-endpoints:
-  agents:
-    capabilities:
-      - "context"  # Enables both agent file context and upload as text
-      - "ocr"      # Optionally enhances both with OCR
+
   # assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
@@ -556,6 +551,10 @@ fileConfig:
       totalSizeLimit: 500  # Maximum total size for all files in a single request in MB
   serverFileSizeLimit: 100  # Global server file size limit in MB
   avatarSizeLimit: 2
+    agents:
+      capabilities:
+        - "context"  # Enables both agent file context and upload as text
+        - "ocr"      # Optionally enhances both with OCR
 # See the Custom Configuration Guide for more information on Assistants Config:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 
@@ -593,4 +592,6 @@ memory:
     provider: "openAI"
     model: "gpt-4o-mini"
     instructions: "You are a memory management assistant. Store and manage user information accurately."
+
+  
 

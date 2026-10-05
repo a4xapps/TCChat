@@ -543,35 +543,31 @@ actions:
 
 
   
+endpoints:
+  agents:
+    capabilities:
+      - "context"
+      - "ocr"
+
 fileConfig:
   endpoints:
     default:
       fileLimit: 20
-      fileSizeLimit: 100   # Maximum size for an individual file in MB
-      totalSizeLimit: 500  # Maximum total size for all files in a single request in MB
-  serverFileSizeLimit: 100  # Global server file size limit in MB
-  avatarSizeLimit: 2
+      fileSizeLimit: 100
+      totalSizeLimit: 500
     agents:
-      capabilities:
-        - "context"  # Enables both agent file context and upload as text
-        - "ocr"      # Optionally enhances both with OCR
-# See the Custom Configuration Guide for more information on Assistants Config:
-# https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
-
-# Web Search Configuration (optional)
-# webSearch:
-#   # Jina Reranking Configuration
-#   jinaApiKey: '${JINA_API_KEY}'  # Your Jina API key
-#   jinaApiUrl: '${JINA_API_URL}'  # Custom Jina API URL (optional, defaults to https://api.jina.ai/v1/rerank)
-#   # Other rerankers
-#   cohereApiKey: '${COHERE_API_KEY}'
-#   # Search providers
-#   serperApiKey: '${SERPER_API_KEY}'
-#   searxngInstanceUrl: '${SEARXNG_INSTANCE_URL}'
-#   searxngApiKey: '${SEARXNG_API_KEY}'
-#   # Content scrapers
-#   firecrawlApiKey: '${FIRECRAWL_API_KEY}'
-#   firecrawlApiUrl: '${FIRECRAWL_API_URL}'
+      fileLimit: 20
+      fileSizeLimit: 100
+      totalSizeLimit: 500
+  serverFileSizeLimit: 100
+  avatarSizeLimit: 2
+  ocr:
+    supportedMimeTypes:
+      - "^image/(jpeg|gif|png|webp|heic|heif)$"
+      - "^application/pdf$"
+      - "^application/vnd\\.openxmlformats-officedocument\\.(wordprocessingml\\.document|presentationml\\.(presentation|template)|spreadsheetml\\.sheet)$"
+      - "^application/vnd\\.ms-(word|powerpoint|excel)$"
+      - "^application/epub\\+zip$"
 
 # Memory configuration for user memories
 memory:
